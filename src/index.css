@@ -15,6 +15,7 @@ ol, ul {
 
 .status {
   margin-bottom: 10px;
+  position: bottom;
 }
 
 .square {
@@ -28,6 +29,7 @@ ol, ul {
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
+  position: static;
   text-align: center;
   width: 50px;
 }
@@ -47,4 +49,5 @@ ol, ul {
 
 .game-info {
   margin-left: 20px;
+  position: static;
 }
