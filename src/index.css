@@ -1,11 +1,12 @@
 body {
   font: 35px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
-  color: 003366;
+  margin: 0px;
+  color: #003366;
+  text-align: center;
 }
 
 ol, ul {
-  padding-left: 30px;
+  padding-left: 0px;
 }
 
 .board-row:after {
@@ -24,6 +25,7 @@ ol, ul {
   border: 1px solid #999;
   float: left;
   font-size: 95px;
+  transform: rotateY(360deg);
   font-weight: bold;
   color: white;
   line-height: 100px;
