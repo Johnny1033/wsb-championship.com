@@ -45,10 +45,13 @@ ol, ul {
 .game {
   display: flex;
   flex-direction: row;
-  position: static;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
 .game-info {
   margin-left: 20px;
-  position: relative;
+  position: absolute;
+  top: 280px;
 }
