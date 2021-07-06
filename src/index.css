@@ -1,6 +1,7 @@
 body {
   font: 35px "Century Gothic", Futura, sans-serif;
   margin: 20px;
+  color: 003366;
 }
 
 ol, ul {
@@ -53,5 +54,5 @@ ol, ul {
 .game-info {
   margin-left: 20px;
   position: absolute;
-  top: 280px;
+  top: 305px;
 }
