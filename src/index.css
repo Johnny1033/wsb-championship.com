@@ -47,12 +47,13 @@ ol, ul {
   display: flex;
   flex-direction: row;
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 40px;
+  left: 40px;
 }
 
 .game-info {
-  margin-left: 20px;
   position: absolute;
   top: 305px;
+  border: 2px solid slateblue;
+  padding: 20px;
 }
