@@ -25,6 +25,7 @@ ol, ul {
   float: left;
   font-size: 95px;
   font-weight: bold;
+  color: white;
   line-height: 100px;
   height: 100px;
   margin-right: -1px;
@@ -56,4 +57,5 @@ ol, ul {
   top: 305px;
   border: 2px solid slateblue;
   padding: 20px;
+  color: #003366;
 }
