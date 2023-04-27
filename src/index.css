@@ -25,7 +25,6 @@ ol, ul {
   border: 1px solid #999;
   float: left;
   font-size: 95px;
-  transform: rotateY(360deg);
   font-weight: bold;
   color: white;
   line-height: 100px;
@@ -36,10 +35,34 @@ ol, ul {
   position: static;
   text-align: center;
   width: 100px;
+  transition: background 0.3s, transform 0.3s;
 }
 
 .square:focus {
   outline: none;
+}
+
+.square:hover {
+  background: #005599;
+  cursor: pointer;
+}
+
+.highlight {
+  background: #5cb85c;
+  color: #fff;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .kbd-navigation .square:focus {
@@ -60,4 +83,22 @@ ol, ul {
   border: 2px solid slateblue;
   padding: 30px;
   color: #003366;
+}
+
+.move-btn {
+  background: #f0f0f0;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 2px;
+  transition: background-color 0.3s;
+}
+
+.move-btn:hover {
+  background-color: #ddd;
+}
+
+.move-btn.active {
+  font-weight: bold;
+  background-color: #ccc;
 }
