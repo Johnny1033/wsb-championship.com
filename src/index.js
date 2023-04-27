@@ -46,6 +46,7 @@ class Game extends React.Component {
       }],
       stepNumber: 0,
       xIsNext: true,
+      reverseHistory: false,
     };
   }
 
@@ -73,6 +74,12 @@ class Game extends React.Component {
     });
   }
 
+  toggleHistoryOrder() {
+    this.setState({
+      reverseHistory: !this.state.reverseHistory,
+    });
+  }
+
   render() {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
@@ -80,20 +87,30 @@ class Game extends React.Component {
     const winner = winInfo.winner;
 
     const moves = history.map((step, move) => {
-      const desc = move ?
-        'Move #' + move :
-        'New game';
+      const row = Math.floor((move - 1) / 3) + 1;
+      const col = ((move - 1) % 3) + 1;
+      const desc = move ? `Move #${move} (${row}, ${col})` : "New game";
       return (
         <div key={move}>
-          <button className={`move-btn ${move === this.state.stepNumber ? 'active' : ''}`} onClick={() => this.jumpTo(move)}>{desc}</button>
+          <button
+            className={`move-btn ${
+              move === this.state.stepNumber ? "active" : ""
+            }`}
+            onClick={() => this.jumpTo(move)}
+          >
+            {desc}
+          </button>
         </div>
-      )
+      );
     });
+
     let status;
     if (winner) {
-      status = 'Winner: ' + winner;
+      status = "Winner: " + winner;
+    } else if (this.state.stepNumber === 9) {
+      status = "It's a draw!";
     } else {
-      status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+      status = "Next player: " + (this.state.xIsNext ? "X" : "O");
     }
 
     return (
@@ -107,7 +124,10 @@ class Game extends React.Component {
         </div>
         <div className="game-info">
           <div>{status}</div>
-          <ol>{moves}</ol>
+          <button onClick={() => this.toggleHistoryOrder()}>
+            Reverse history
+          </button>
+          <ol>{this.state.reverseHistory ? moves.reverse() : moves}</ol>
         </div>
       </div>
     );
@@ -138,7 +158,7 @@ function calculateWinner(squares) {
         line: lines[i],
       };
     }
-  } // Add the missing closing brace here
+  }
   return {
     winner: null,
     line: null,
