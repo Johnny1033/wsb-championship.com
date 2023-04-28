@@ -3,9 +3,7 @@ body {
   margin: 0px;
   color: #003366;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  background: linear-gradient(to bottom, #f0f0f0, #b3b3b3);
 }
 
 ol, ul {
@@ -107,6 +105,5 @@ ol, ul {
 }
 
 .links {
-  margin-top: auto;
-  padding-bottom: 10px;
+  padding-top: 10px;
 }
