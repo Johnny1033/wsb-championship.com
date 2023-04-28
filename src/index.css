@@ -3,6 +3,9 @@ body {
   margin: 0px;
   color: #003366;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 ol, ul {
@@ -101,4 +104,9 @@ ol, ul {
 .move-btn.active {
   font-weight: bold;
   background-color: #ccc;
+}
+
+.links {
+  margin-top: auto;
+  padding-bottom: 10px;
 }
