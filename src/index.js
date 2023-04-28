@@ -115,11 +115,6 @@ class Game extends React.Component {
 
     return (
       <div className="game">
-        <div className="links">
-          <a href="https://www.johnmessinger.io" target="_blank" rel="noopener noreferrer">John Messinger</a>
-          {' | '}
-          <a href="https://www.mealentropy.com" target="_blank" rel="noopener noreferrer">Meal Entropy</a>
-        </div>
         <div className="game-board">
           <Board
             squares={current.squares}
@@ -133,6 +128,11 @@ class Game extends React.Component {
             Reverse history
           </button>
           <ol>{this.state.reverseHistory ? moves.reverse() : moves}</ol>
+        </div>
+        <div className="links">
+          <a href="https://www.johnmessinger.io" target="_blank" rel="noopener noreferrer">John Messinger</a>
+          {' | '}
+          <a href="https://www.mealentropy.com" target="_blank" rel="noopener noreferrer">Meal Entropy</a>
         </div>
       </div>
     );
