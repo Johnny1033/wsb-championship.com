@@ -67,18 +67,19 @@ ol, ul {
 
 .game {
   display: flex;
-  flex-direction: row;
-  margin-top: 40px;
-  margin-left: 40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 0;
 }
 
 .game-info {
-  margin-left: 20px;
+  margin-top: 20px;
   border: 2px solid slateblue;
   padding: 30px;
   color: #003366;
 }
-
 
 .move-btn {
   background: #f0f0f0;
@@ -99,7 +100,7 @@ ol, ul {
 }
 
 .links {
-  padding-top: 10px;
+  padding-top: 40px;
 }
 
 .leaderboard {
