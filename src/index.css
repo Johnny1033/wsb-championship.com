@@ -16,11 +16,6 @@ ol, ul {
   display: table;
 }
 
-.status {
-  margin-bottom: 10px;
-  position: bottom;
-}
-
 .square {
   background: #003366;
   border: 1px solid #999;
@@ -106,4 +101,26 @@ ol, ul {
 
 .links {
   padding-top: 10px;
+}
+
+.leaderboard {
+  margin-left: 20px;
+  width: 150px;
+}
+
+.leaderboard table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard th,
+.leaderboard td {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.leaderboard h2 {
+  margin: 0;
+  margin-bottom: 0.5rem;
 }
