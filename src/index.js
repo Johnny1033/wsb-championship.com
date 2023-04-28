@@ -138,6 +138,13 @@ class Game extends React.Component {
     return (
       <div className="game">
         <div className="game-container">
+          <div className="game-info">
+            <div>{status}</div>
+            <button onClick={() => this.toggleHistoryOrder()}>
+              Reverse history
+            </button>
+            <ol>{this.state.reverseHistory ? moves.reverse() : moves}</ol>
+          </div>
           <div className="game-board">
             <Board
               squares={current.squares}
@@ -147,12 +154,10 @@ class Game extends React.Component {
           </div>
           <Leaderboard scores={this.state.scores} />
         </div>
-        <div className="game-info">
-          <div>{status}</div>
-          <button onClick={() => this.toggleHistoryOrder()}>
-            Reverse history
-          </button>
-          <ol>{this.state.reverseHistory ? moves.reverse() : moves}</ol>
+        <div className="footer">
+          <div className="links">
+            ...
+          </div>
         </div>
       </div>
     );
