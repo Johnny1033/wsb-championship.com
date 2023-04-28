@@ -154,11 +154,6 @@ class Game extends React.Component {
           </button>
           <ol>{this.state.reverseHistory ? moves.reverse() : moves}</ol>
         </div>
-        <div className="footer">
-          <a href="https://www.johnmessinger.io" target="_blank" rel="noopener noreferrer">John Messinger</a>
-          {' | '}
-          <a href="https://www.mealentropy.com" target="_blank" rel="noopener noreferrer">Meal Entropy</a>
-        </div>
       </div>
     );
   }
