@@ -65,6 +65,17 @@ ol, ul {
   background: #003366;
 }
 
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.game-info {
+  margin-right: 40px;
+}
+
 .game {
   display: flex;
   flex-direction: column;
@@ -72,14 +83,6 @@ ol, ul {
   justify-content: center;
   min-height: 100vh;
   padding: 40px 0;
-}
-
-.game-info {
-  margin-top: 20px;
-  border: 2px solid slateblue;
-  padding: 30px;
-  color: #003366;
-  font-size: 25px;
 }
 
 .move-btn {
@@ -105,8 +108,7 @@ ol, ul {
 }
 
 .leaderboard {
-  margin-left: 20px;
-  width: 150px;
+  margin-left: 40px;
 }
 
 .leaderboard table {
