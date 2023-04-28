@@ -68,18 +68,17 @@ ol, ul {
 .game {
   display: flex;
   flex-direction: row;
-  position: absolute;
-  top: 40px;
-  left: 40px;
+  margin-top: 40px;
+  margin-left: 40px;
 }
 
 .game-info {
-  position: absolute;
-  top: 305px;
+  margin-left: 20px;
   border: 2px solid slateblue;
   padding: 30px;
   color: #003366;
 }
+
 
 .move-btn {
   background: #f0f0f0;
