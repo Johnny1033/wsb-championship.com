@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import Leaderboard from './leaderboard';
 
 function Square(props) {
   return (
@@ -47,6 +48,11 @@ class Game extends React.Component {
       stepNumber: 0,
       xIsNext: true,
       reverseHistory: false,
+      scores: {
+        X: 0,
+        O: 0,
+        draws: 0,
+      },
     };
   }
 
@@ -64,6 +70,22 @@ class Game extends React.Component {
       }]),
       stepNumber: history.length,
       xIsNext: !this.state.xIsNext,
+    });
+    const winner = calculateWinner(squares).winner;
+    if (winner || this.state.stepNumber === 8) {
+      this.updateScores(winner);
+    }
+  }
+
+  updateScores(winner) {
+    this.setState((state) => {
+      const newScores = { ...state.scores };
+      if (winner) {
+        newScores[winner]++;
+      } else {
+        newScores.draws++;
+      }
+      return { scores: newScores };
     });
   }
 
@@ -115,12 +137,15 @@ class Game extends React.Component {
 
     return (
       <div className="game">
-        <div className="game-board">
-          <Board
-            squares={current.squares}
-            onClick={(i) => this.handleClick(i)}
-            winLine={winInfo.line}
-          />
+        <div className="game-container">
+          <div className="game-board">
+            <Board
+              squares={current.squares}
+              onClick={(i) => this.handleClick(i)}
+              winLine={winInfo.line}
+            />
+          </div>
+          <Leaderboard scores={this.state.scores} />
         </div>
         <div className="game-info">
           <div>{status}</div>
