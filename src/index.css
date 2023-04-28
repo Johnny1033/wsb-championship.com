@@ -126,3 +126,13 @@ ol, ul {
   margin-bottom: 0.5rem;
   font-size: 20px;
 }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #f0f0f0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
